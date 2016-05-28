@@ -1,0 +1,11 @@
+{
+	"trip": {
+		"end_station": {
+			"name": "2748 - Tour Eiffel"
+		},
+		"end_time": 1464439800000,
+		"duration": "00:45:26",
+		"points": 84,
+		"distance": 8.4
+	}
+}
