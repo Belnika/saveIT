@@ -1,0 +1,44 @@
+body {
+    background: #DBFFCD;
+    text-align: center;
+    margin: 100px auto;
+    max-width: 462em;
+    padding: 0 40px;
+    font-family: 'Varela Round', Helvetica, serif;
+    font-size: 18px;
+    color: #777B7E;
+}
+
+input {
+    font-family: 'Varela Round', Helvetica, serif;
+    font-size: 18px;
+    padding: 31px 0;
+    margin: 10px 0;
+    text-align: center;
+    width: 360px;
+    border-radius: 4px;
+    border: 1px solid #D5DDE4;
+    color: #2C3238;
+}
+.button {
+           border-color: #8CE073;
+           background: #8CE073;
+           color: #fff;
+       }
+#username {
+  margin: 20px 0 0;
+}
+
+#text-align {
+  float: left;
+}
+
+a {
+  font-family: 'Varela Round', Helvetica, serif;
+  font-size: 18px,
+}
+
+a, a:visited {
+    color: #111111;
+    text-decoration: none;
+}
