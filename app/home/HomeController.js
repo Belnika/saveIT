@@ -18,7 +18,7 @@ angular.module('SaveIT.home', ['ngRoute'])
 	};
 
 	$scope.fetchUser = function() {
-		$http.get("/api/user.json").then(function(response){
+		$http.get("/api/user.html").then(function(response){
 			if (response.data && response.data.user) {
 				$scope.user = response.data.user;
 			}

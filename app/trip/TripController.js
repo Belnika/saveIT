@@ -22,7 +22,7 @@ angular.module('SaveIT.trip', ['ngRoute'])
 		$scope.getCurrentLocation().then(function(data) {
 			$http({
 				method: 'GET',
-				url: '/api/start.json',
+				url: '/api/start.html',
 				data: {latitude: data.coords.latitude, longitude: data.coords.longitude}
 			}).then(function(response) {
 				if (response.data && response.data.trip && response.data.trip.start_station && response.data.trip.start_time) {
@@ -45,7 +45,7 @@ angular.module('SaveIT.trip', ['ngRoute'])
 		$scope.getCurrentLocation().then(function(data) {
 			$http({
 				method: 'GET',
-				url: '/api/stop.json',
+				url: '/api/stop.html',
 				data: {latitude: data.coords.latitude, longitude: data.coords.longitude}
 			}).then(function(response) {
 				if (response.data && response.data.trip 
