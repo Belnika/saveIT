@@ -1,0 +1,14 @@
+<div ng-controller="HomeController" ng-init="fetchUser()">
+	<img src="public/img/sports.png" class="bike" />
+	<h2>Hi, {{user.username}} !</h2>
+	<div>
+	<span>You already biked <b>{{user.distance}}km</b></span>
+	<br />
+	<span>You earned <b>{{user.points}}</b> points</span>
+	<input class="button" ng-click="goToStart()" value="Start Trip" />
+
+	<div class="easter-top-left" ng-click="goToEaster(0)"></div>
+	<div class="easter-bottom-right" ng-click="goToEaster(1)"></div>
+	<div class="easter-bottom-left" ng-click="goToEaster(2)"></div>
+	<div class="easter-top-right" ng-click="goToEaster(3)"></div>
+</div>

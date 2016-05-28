@@ -1,0 +1,10 @@
+{
+	"trip": {
+		"start_station": {
+			"name": "1342 - Belleville"
+		},
+		"start_time": 1464439800000,
+		"end_station": null,
+		"end_time": null
+	}
+}

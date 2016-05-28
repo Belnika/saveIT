@@ -1,0 +1,38 @@
+<div ng-controller="TripController" ng-init="startSession()">
+	<div ng-if="!$$hasStarted">
+		<span class="error">{{error}}</span>
+		<input class="button" type="submit" ng-click="startSession()" value="Retry" />
+	</div>
+	<div ng-if="$$hasStarted">
+		<h2><b>Trip Info</b></h2>
+		<p>
+			<img class="start" src="public/img/signs.png" />
+			<span class="trip-data">{{start_station.name}}</span>
+		</p>
+		<p ng-if="$$hasFinished">
+			<img class="start" src="public/img/end.png" />
+			<span class="trip-data">{{end_station.name}}</span>
+		</p>
+		<p ng-if="$$hasFinished">
+			<img class="start" src="public/img/gps.png" />
+			<span class="trip-data">{{distance}}km</span>
+		</p>
+		<p ng-if="!$$hasFinished">
+			<img class="timer" src="public/img/stopwatch.png" />
+			<timer class="trip-data" interval="1000">{{hhours}}:{{mminutes}}:{{sseconds}}</timer>
+		</p>
+		<p ng-if="$$hasFinished">
+			<img class="timer" src="public/img/stopwatch.png" />
+			<span class="trip-data">{{duration}}</span>
+		</p>
+
+		<p ng-if="$$hasFinished">
+			<img class="start" src="public/img/favorite.png" />
+			<span class="trip-data">You earned {{points}} points</span>
+		</p>
+
+		<input ng-if="!$$hasFinished" class="button" type="submit" ng-click="finishSession()" value="Finish" />
+		<input ng-if="$$hasFinished" class="button" type="submit" ng-click="goToHome()" value="Home" />
+	</div>
+	<input ng-if="!$$hasFinished" class="button-home" type="submit" ng-click="goToHome()" value="Cancel" />
+</div>

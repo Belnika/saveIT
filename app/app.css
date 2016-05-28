@@ -1,0 +1,172 @@
+body {
+    background: #DBFFCD;
+    padding: 0 30px;
+    margin-top: 50px;
+    text-align: center;
+    font-family: 'Varela Round', Helvetica, serif;
+    font-size: 18px;
+    color: #777B7E;
+}
+
+.brand {
+    width: 100%;
+    margin: auto;
+}
+
+.brand img {
+    width: 100%
+}
+
+.bike {
+    width: 50%;
+}
+
+.start {
+  width: 35px;
+  display: inline-block;
+}
+
+.timer {
+  width: 30px;
+  display: inline-block;
+}
+
+.trip-data {
+  font-size: 25px;
+  vertical-align: middle;
+  height: 30px;
+  display: inline-block;
+}
+
+.error {
+  color: #c44450;
+  font-weight: bold;
+}
+
+input {
+    font-family: 'Varela Round', Helvetica, serif;
+    font-size: 26px;
+    padding: 10px 0;
+    margin: 10px 0;
+    text-align: center;
+    border-radius: 4px;
+    border: 1px solid #D5DDE4;
+    width: 80%;
+    color: #2C3238;
+}
+.button {
+   border-color: #8CE073;
+   background: #8CE073;
+   color: #fff;
+   margin: 20px 0;
+   font-family: 'Varela Round', Helvetica, serif;
+    font-size: 26px;
+    padding: 10px 0;
+    margin: 10px 0;
+    text-align: center;
+    border-radius: 4px;
+    border: 1px solid #D5DDE4;
+    width: 80%;
+}
+
+.button:disabled {
+    opacity: 0.5;
+}
+
+.button-home {
+   border-color: #0095ff;
+   background: #0095ff;
+   color: #fff;
+   margin: 20px 0;
+}
+
+.easter-top-left {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 10px;
+}
+.easter-bottom-left {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 10px;
+    height: 10px;
+}
+
+.easter-bottom-right {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 10px;
+    height: 10px;
+}
+
+.easter-top-right {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 10px;
+    height: 10px;
+}
+
+
+
+
+
+.bd {
+  text-align:center;
+}
+.container {
+  #margin:0 auto;
+  #width:266px;
+}
+.slot-wrapper {
+}
+.slot {
+  background:url("public/img/reel_normal.png") repeat-y; /*Taken from http://www.swish-designs.co.uk*/
+  width:86px;
+  height:86px;
+  display: inline-table;
+  /*background-position:0 4px;*/
+}
+.motion {
+  background:url("public/img/reel_blur.png") repeat-y; /*Taken from http://www.swish-designs.co.uk*/
+}
+
+#result {
+  margin:20px 0;
+  font-size:18px;
+  font-weight:bold;
+  height:22px;
+}
+.credits {
+  font-size:15px;
+  margin-top:20px;
+}
+.credits .browsers {
+  font-style:italic;
+  font-size:14px;
+  color:#777;
+  margin-top:4px;
+}
+.clear {
+  clear:both;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.easter {
+    animation: blink 1s;
+    animation-iteration-count: infinite;
+}
