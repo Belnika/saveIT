@@ -32,6 +32,9 @@
 		</p>
 
 		<input ng-if="!$$hasFinished" class="button" type="submit" ng-click="finishSession()" value="Finish" />
+		<div ng-if="$$finishFailed">
+			<span class="error">{{error}}</span>
+		</div>
 		<input ng-if="$$hasFinished" class="button" type="submit" ng-click="goToHome()" value="Home" />
 	</div>
 	<input ng-if="!$$hasFinished" class="button-home" type="submit" ng-click="goToHome()" value="Cancel" />

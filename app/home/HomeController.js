@@ -9,7 +9,7 @@ angular.module('SaveIT.home', ['ngRoute'])
   	})
 }])
 
-.controller('HomeController', ['$scope', '$location', '$http', function($scope, $location, $http) {
+.controller('HomeController', ['$scope', '$location', '$http', '$cookies', function($scope, $location, $http, $cookies) {
 	$scope.user = null;
 	$scope.easter = [false, false, false, false];
 	
@@ -21,6 +21,7 @@ angular.module('SaveIT.home', ['ngRoute'])
 		$http.get("/api/user.html").then(function(response){
 			if (response.data && response.data.user) {
 				$scope.user = response.data.user;
+				$scope.user.username = $cookies.get("username")
 			}
 			else {
 				//TODO redirect to login
