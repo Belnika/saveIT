@@ -35,4 +35,7 @@
 		<input ng-if="$$hasFinished" class="button" type="submit" ng-click="goToHome()" value="Home" />
 	</div>
 	<input ng-if="!$$hasFinished" class="button-home" type="submit" ng-click="goToHome()" value="Cancel" />
+	<div class="spin"  ng-if="$$loading">
+		<div class='uil-gps-css spinner' style='transform:scale(0.55);'><div class="inner"></div><div class="outer"></div><div class="markers"><div class="markers-ib"><div class="marker"></div><div class="marker"></div><div class="marker"></div><div class="marker"></div></div></div></div>
+	</div>
 </div>

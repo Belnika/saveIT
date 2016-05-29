@@ -13,12 +13,14 @@ angular.module('SaveIT.trip', ['ngRoute'])
 
 	$scope.$$hasStarted = false;
 	$scope.$$hasFinished = false;
+	$scope.$$loading = false;
 
 	$scope.goToHome = function() {
 		$location.path("/");
 	};
 
 	$scope.startSession = function() {
+		$scope.$$loading = true;
 		$scope.getCurrentLocation().then(function(data) {
 			$http({
 				method: 'GET',
@@ -34,14 +36,17 @@ angular.module('SaveIT.trip', ['ngRoute'])
 					$scope.error = "Can't find any station next to you";
 					$scope.$$hasStarted = false;
 				}
+				$scope.$$loading = false;
 			});
 		}, function(reason) {
 			$scope.error = "Please activate your GPS";
 			$scope.$$hasStarted = false;
+			$scope.$$loading = false;
 		});
 	};
 
 	$scope.finishSession = function() {
+		$scope.$$loading = false;
 		$scope.getCurrentLocation().then(function(data) {
 			$http({
 				method: 'GET',
@@ -62,10 +67,12 @@ angular.module('SaveIT.trip', ['ngRoute'])
 					$scope.error = "Can't find any station next to you";
 					$scope.$$hasFinished = false;
 				}
+				$scope.$$loading = false;
 			});
 		}, function(reason) {
 			$scope.error = "Please activate your GPS";
 			$scope.$$hasFinished = false;
+			$scope.$$loading = false;
 		});
 	};
 

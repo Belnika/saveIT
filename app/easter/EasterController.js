@@ -14,4 +14,8 @@ angular.module('SaveIT.easter', ['ngRoute'])
 	$scope.initSlot = function() {
 		initSlot();
 	}
+
+	$scope.goToHome = function() {
+		$location.path("/home");
+	}
 }]);
