@@ -18,16 +18,20 @@ angular.module('SaveIT.home', ['ngRoute'])
 	};
 
 	$scope.fetchUser = function() {
-		$http.get("/api/user.html").then(function(response){
-			if (response.data && response.data.user) {
-				$scope.user = response.data.user;
-				$scope.user.username = $cookies.get("username")
-			}
-			else {
-				//TODO redirect to login
-			}
-			console.log($scope.user);
-		});
+		if ($cookies.get("username")) {
+			$http.get("/api/user.html").then(function(response){
+				if (response.data && response.data.user) {
+					$scope.user = response.data.user;
+					$scope.user.username = $cookies.get("username")
+				}
+				else {
+					//TODO redirect to login
+				}
+			});
+		}
+		else {
+			$location.path("/login")
+		}
 	}
 
 	$scope.goToEaster = function(i) {
