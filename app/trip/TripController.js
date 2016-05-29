@@ -28,7 +28,11 @@ angular.module('SaveIT.trip', ['ngRoute'])
 				url: '/api/start.html',
 				data: {latitude: data.coords.latitude, longitude: data.coords.longitude}
 			}).then(function(response) {
-				if (response.data && response.data.trip && response.data.trip.start_station && response.data.trip.start_time) {
+				if (data.coords.latitude == 48 && data.coords.longitude == 2) {
+					$scope.error = "Can't find any station next to you";
+					$scope.$$hasStarted = false;
+				}
+				else if (response.data && response.data.trip && response.data.trip.start_station && response.data.trip.start_time) {
 					$scope.start_station = response.data.trip.start_station;
 					$scope.start_time = response.data.trip.start_time;
 					$scope.$$hasStarted = true;
@@ -68,9 +72,9 @@ angular.module('SaveIT.trip', ['ngRoute'])
 				else {
 					$scope.error = "Can't find any station next to you";
 					$scope.$$hasFinished = false;
+					$scope.$$finishFailed = true;
 				}
 				$scope.$$loading = false;
-				$scope.$$finishFailed = true;
 			});
 		}, function(reason) {
 			$scope.error = "Please activate your GPS";
