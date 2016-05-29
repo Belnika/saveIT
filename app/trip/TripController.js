@@ -46,7 +46,7 @@ angular.module('SaveIT.trip', ['ngRoute'])
 	};
 
 	$scope.finishSession = function() {
-		$scope.$$loading = false;
+		$scope.$$loading = true;
 		$scope.getCurrentLocation().then(function(data) {
 			$http({
 				method: 'GET',
